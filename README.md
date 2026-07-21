@@ -31,7 +31,7 @@ Run the scripts from the repo root, in order:
 
 - **`00`** integrates the raw matrices into one object. Its omg predictions are
   used to curate the `cell_type` labels, which are added to the object.
-- **`10`–`40`** start from that annotated object. **Run `10` first** — it writes
+- **`10`–`40`** start from that annotated object. **Run `10` first** it writes
   the marker and DEG tables that `20` reads.
 
 Each script uses `input/` and `output/` by default, or takes them as arguments:
@@ -44,7 +44,7 @@ Rscript 10_setup_umap_markers_degs.R
 Rscript 10_setup_umap_markers_degs.R /path/to/input /path/to/output
 ```
 
-You can also just open a script in RStudio and run it — no arguments needed.
+You can also just open a script in RStudio and run it no arguments needed.
 
 ## Inputs (place in `input/`)
 
@@ -55,7 +55,7 @@ You can also just open a script in RStudio and run it — no arguments needed.
   `cell_type`, `condition`, `seurat_clusters`) produced by `00`.
 
 The raw matrices and the integrated Seurat object are large and are **not**
-committed here — they are deposited in a public database (TBD).
+committed here. They are deposited in a public database (TBD).
 
 ## Included results
 
@@ -70,11 +70,11 @@ the pipeline (figures and `.rds` objects are not tracked):
   per cluster. Columns: `cluster`, `Up`, `Down`.
 - **`omg_output_PC34_res0.25_top200/`** — cell-type annotation from
   [omg](https://github.com/LiLabAtVT/OrthoMarkerGeneGroups) (top-200 markers/cluster):
-  - `cell_type_predictions.csv` — per-cluster prediction, with the
+  - `cell_type_predictions.csv` - per-cluster prediction, with the
     `consolidated_cell_type` call and a `prediction_confidence`.
-  - `compare_15species_all.csv` / `compare_15species_heatmap.pdf` — orthogroup
+  - `compare_15species_all.csv` / `compare_15species_heatmap.pdf` - orthogroup
     marker matches across 15 reference species.
-  - `extract_table_significant.csv` — significant orthogroup–cell-type matches.
+  - `extract_table_significant.csv` - significant orthogroup-cell-type matches.
   - `pairwise/` — per reference species × tissue significance tables and heatmaps.
 
 Running the scripts regenerates equivalent tables under `output/`.
