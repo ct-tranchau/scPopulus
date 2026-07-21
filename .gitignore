@@ -1,0 +1,29 @@
+# Raw inputs and large objects (deposited in a database) — not tracked
+input/
+*.rds
+*.RData
+
+# Figures are regenerable — not tracked
+*.pdf
+*.png
+*.tiff
+
+# Tracked: result tables in output/ (omg annotation, marker & DEG .csv files)
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# OS
+.DS_Store
+._*
+
+# Website (served by GitHub Pages from docs/) — force-track its image/pdf assets
+!docs/**/*.png
+!docs/**/*.pdf
+
+# Never track macOS AppleDouble junk, even under docs/
+._*
+docs/**/._*
