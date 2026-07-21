@@ -20,7 +20,6 @@ secondary-metabolism (phenylpropanoid, lignin) pathways.
 ├── up_down_DEG_MeJA_counts_per_cluster.csv       # up / down DEG counts per cluster
 ├── omg_output_PC34_res0.25_top200/               # omg cell-type annotation output
 │
-├── shiny_app/                       # interactive gene-expression web app (R Shiny)
 │
 ├── input/    # raw inputs (not tracked) — filtered 10x matrices / the Seurat object
 └── output/   # where the scripts write figures & tables by default (not tracked)
